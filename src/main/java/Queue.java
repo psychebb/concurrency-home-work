@@ -11,10 +11,6 @@ public abstract class Queue implements Runnable {
 
     @Override
     public void run() {
-//        while ((bus.getSeats() > 0 && bus.getSeats()<=20) || (bus.getSeats() <= 20 && bus.getSeats() > 0)) {
-//            pop(bus);
-//            Thread.yield();
-//        }
     }
 
     abstract void pop(Bus bus);

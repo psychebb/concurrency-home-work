@@ -8,14 +8,14 @@ public class GetOnQueue extends Queue {
 
     @Override
     public synchronized void pop(Bus bus) {
-        if (passengers.size() > 0 && passengers.get(0).getOn(bus)) {
+        if (passengers.get(0).getOn(bus)) {
             passengers.remove(0);
         }
     }
 
     @Override
     public synchronized void run() {
-        while (bus.getSeats() > 0 && bus.getSeats() <= 20) {
+        while (!bus.readyToGo() && passengers.size() > 0) {
             pop(bus);
         }
     }

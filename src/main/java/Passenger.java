@@ -21,7 +21,7 @@ public class Passenger {
             return false;
         }
         bus.setSeats(bus.getSeats() + 1);
-        System.out.println(String.format("1 passenger get off the bus, the seats are %s", bus.getSeats()));
+        System.out.println(String.format("passenger %s get off the bus, the seats are %s", id, bus.getSeats()));
         return true;
     }
 }
